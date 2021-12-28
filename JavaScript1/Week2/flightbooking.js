@@ -1,4 +1,4 @@
-const getFullName = (firstname,lastname, useFormalName=false)=>{
+const getFullname = (firstname,lastname, useFormalName=false)=>{
     
     
     if(firstname != null || lastname != null)
@@ -27,8 +27,8 @@ const getFullName = (firstname,lastname, useFormalName=false)=>{
     }  
 }
 
-const fullname1 = getFullName("domna","kanaRi", false);
-const fullname2 = getFullName("nikolas","chatzinikolaou", true);
-const fullname3 = getFullName();
+const fullname1 = getFullname("domna","kanaRi", false);
+const fullname2 = getFullname("nikolas","chatzinikolaou", true);
+const fullname3 = getFullname();
 
 console.log(`${fullname1}\n${fullname2}\n${fullname3}`);
