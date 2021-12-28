@@ -1,5 +1,6 @@
-const getFullname = (firstname,lastname, useFormalName=false)=>{
+const getFullname = (firstname,lastname, useFormalName=false, gender)=>{
     let fullname;
+    let checkGenderSpelling;
     
     if(firstname != null || lastname != null)
     {
@@ -13,12 +14,14 @@ const getFullname = (firstname,lastname, useFormalName=false)=>{
         
     }
     fullname = inputArray.join(" ");
-    const firstName = firstname.charAt(0).toUpperCase() + firstname.slice(1).toLowerCase();
-    const lastName = lastname.charAt(0).toUpperCase() + lastname.slice.toLowerCase
-        if(useFormalName){
-            return `Lord ${fullname}`;
-        }else
+
+        if(useFormalName && gender == "female"){
+            return `Lady ${fullname}`;
+        }else if(useFormalName && gender == "male")
         {
+            return `Lord ${fullname}`;
+        }
+        else {
             return fullname;
         }
     }
@@ -29,8 +32,8 @@ const getFullname = (firstname,lastname, useFormalName=false)=>{
     }  
 }
 
-const fullname1 = getFullname("domna","kanaRi", false);
-const fullname2 = getFullname("nikolas","chatzinikolaou", true);
+const fullname1 = getFullname("domna","kanaRi",true, "female");
+const fullname2 = getFullname("nikolas","chatzinikolaou", true, "male");
 const fullname3 = getFullname();
 
 console.log(`${fullname1}\n${fullname2}\n${fullname3}`);
