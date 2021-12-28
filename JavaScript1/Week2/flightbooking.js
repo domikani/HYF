@@ -1,5 +1,5 @@
 const getFullname = (firstname,lastname, useFormalName=false)=>{
-    
+    let fullname;
     
     if(firstname != null || lastname != null)
     {
@@ -12,7 +12,7 @@ const getFullname = (firstname,lastname, useFormalName=false)=>{
         inputArray[letter] = inputArray[letter].charAt(0).toUpperCase() + inputArray[letter].slice(1).toLowerCase();
         
     }
-    const fullname = inputArray.join(" ");
+    fullname = inputArray.join(" ");
     const firstName = firstname.charAt(0).toUpperCase() + firstname.slice(1).toLowerCase();
     const lastName = lastname.charAt(0).toUpperCase() + lastname.slice.toLowerCase
         if(useFormalName){
@@ -21,9 +21,11 @@ const getFullname = (firstname,lastname, useFormalName=false)=>{
         {
             return fullname;
         }
-    }else 
+    }
+    else 
     {
-        return `Please fill in the form with your details!`
+        fullname = `Please fill in the form with your details`
+        return fullname;
     }  
 }
 
