@@ -4,12 +4,17 @@ const travelInformation = {
   };
 
   const calculateTime = (obj) =>{
-      
+     const speedInKm = obj.speed;
+     const distance = obj.destinationDistance;
+     const calculateTimeInHours = distance/speedInKm; 
+     const roundHours = Math.floor(calculateTimeInHours);
+     const minutes = (calculateTimeInHours - roundHours)*60;
+     const roundMinutes = Math.floor(minutes);
+
+     return `${roundHours} hour (s) and ${roundMinutes} minute(s)`
   }
   
   const travelTime = calculateTime(travelInformation);
   console.log(travelTime); // 8 hours and 38 minutes
 
-  //Write
-  // a function where you speficy your speed in km/h and 
-  //how far you have to go in km. The function has to return the time it will take to arrive at your destination. The time should be formatted like this: 3 hours and 34 minutes.
+  
